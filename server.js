@@ -7,7 +7,10 @@ app.set('view engine', 'jsx');
 app.set('views', './views');
 app.engine('jsx', jsxViewEngine());
 
-app.get ("/")
+
+app.get("/", (req, res) => {
+    res.send("Welcome to the Pokemon App!")
+  })
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`);
