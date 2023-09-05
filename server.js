@@ -19,6 +19,11 @@ app.get("/pokemon", (req, res) => {
     res.render("Index", { pokemon: pokemon })
 })
 
+app.get("/pokemon/:id", (req, res) => {
+    //req.params.id is a good test to make sure the data from the URL is being passed to the browser correctly, since it will display anything you type as the ID
+    res.send(req.params.id)
+})
+
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
 });
