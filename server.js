@@ -14,8 +14,9 @@ app.get("/", (req, res) => {
 });
 
 //DISPLAYING POKEMON IN THE BROWSER IN JSON
+//THIS LOOKS FOR THE /VIEWS FOLDER WHICH IS SET BY APP.SET ABOVE, LOOKS FOR THE INDEX FILE, AND THEN PULLS THE POKEMON : POKEMON VIA KEY/VALUE PAIR THAT ARE INSIDE THE FILE
 app.get("/pokemon", (req, res) => {
-    res.send(pokemon)
+    res.render("Index", { pokemon: pokemon })
 })
 
 app.listen(PORT, () => {
